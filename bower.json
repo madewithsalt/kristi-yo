@@ -4,7 +4,13 @@
   "dependencies": {
     "sass-bootstrap": "~3.0.0",
     "modernizr": "~2.6.2",
-    "jquery": "~1.10.2"
+    "jquery": "~1.10.2",
+    "handlebars": "latest",
+    "skrollr": "latest",
+    "backbone": "latest",
+    "marionette": "latest",
+    "underscore": "latest",
+    "font-awesome": "latest"
   },
   "devDependencies": {}
 }

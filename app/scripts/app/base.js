@@ -35,7 +35,6 @@ this.App = (function(Backbone, Marionette) {
   });
 
   App.on('initialize:after', function() {
-    console.log('app initd!');
 
     App.introRegion.show(new App.Views.IntroView());
     App.aboutRegion.show(new App.Views.AboutView());
@@ -46,6 +45,9 @@ this.App = (function(Backbone, Marionette) {
       entity: App.request('entities:skills'),
       region: this.skillsRegion
     });
+
+    App.workRegion.show(new App.Views.WorkView());
+    App.contactRegion.show(new App.Views.ContactView());
 
   });
   

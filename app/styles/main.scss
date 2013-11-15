@@ -7,14 +7,22 @@
 @import "intro";
 @import "about";
 @import "skills";
+@import "work";
+@import "contact";
 
-/* Space out content a bit */
 body {
     color: $text-color;
     @include open-sans;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+a {
+	color: $orange;
+
+	&:hover {
+		color: darken($orange, 20);
+	}
+}
+
 .header,
 .marketing,
 .footer {
@@ -22,8 +30,6 @@ body {
     padding-right: 15px;
 }
 
-
-/* Custom page header */
 .header {
     position: fixed;
     top: 4px;
@@ -36,12 +42,22 @@ body {
     .section {
 		position: relative;
         min-height: 550px;
+        padding-bottom: 40px;
         @include clearfix;
     }
 }
 
+.sm-header {
+	font-size: 1.8em;
+	font-weight: 200;
+	text-transform: uppercase;
+}
 
-/* Responsive: Portrait tablets and up */
+.lg-header {
+	font-size: 2.3em;
+	font-weight: 200;
+}
+
 @media screen and (min-width: 768px) {
 
 }

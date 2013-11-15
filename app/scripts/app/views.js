@@ -30,15 +30,17 @@ App.module("Views", function(Views, App, Backbone, Marionette, $, _) {
       var self = this;
       this.$el.css('opacity', 0);
 
-      $('.intro-block').waypoint(function() {
+      $('#about-region').waypoint(function() {
         self.transitionIn();
       }, {
-        offset: 10
+        offset: 70,
+        triggerOnce: true
       });
 
       this.$('.descrip').attr({
-        'data-500': 'opacity: 1;',
-        'data-1000': 'opacity: 0;'
+        'data-anchor-target': '.about-block',
+        'data-0-top': 'opacity: 1;',
+        'data--300-top': 'opacity: 0;'
       });
 
     },
@@ -72,7 +74,24 @@ App.module("Views", function(Views, App, Backbone, Marionette, $, _) {
 
   Views.Skill = Marionette.ItemView.extend({
     template: 'skill-item',
-    className: 'skill'
+    className: 'skill',
+
+    serializeData: function() {
+      var attrs = this.model.toJSON();
+
+      return _.extend(attrs, {
+        percent: attrs.rating * 10
+      });
+    },
+
+    onRender: function() {
+      var $el = this.$el,
+          cats = this.model.get('categories');
+
+      _.each(cats, function(item, idx) {
+        $el.addClass(item);
+      });
+    }
   });
 
   Views.SkillsView = Marionette.CompositeView.extend({
@@ -81,7 +100,82 @@ App.module("Views", function(Views, App, Backbone, Marionette, $, _) {
     itemView: Views.Skill,
     itemViewContainer: '.skills-list',
 
-    onRender: function() {}
+    onShow: function() {
+      var self = this;
+
+      this.$('.skills-list-block').waypoint(function() {
+        self.showPercents();
+      }, {
+        offset: 150,
+        triggerOnce: true
+      });
+    },
+
+    showPercents: function(view) {
+      var $skills = this.$('.skill');
+
+      $skills.each(function() {
+        var $bar = $(this).find('.progress-bar');
+        $bar.css('width', $bar.data('percent') + '%');
+      });
+    }
+  });
+
+  Views.WorkView = Marionette.ItemView.extend({
+    template: 'work',
+    className: 'work-block',
+
+    onShow: function() {
+      var self = this;
+
+      this.$('.current-project, .past-projects').css('opacity', 0);
+
+      $('.work-block').waypoint(function() {
+        self.transitionIn();
+      }, {
+        offset: 80,
+        triggerOnce: true
+      });
+    },
+
+    transitionIn: function() {
+      $('.current-project').animate({
+        'opacity': 1
+      });
+
+      setTimeout(function() {
+        $('.past-projects').animate({
+          'opacity': 1
+        });
+      }, 400);
+    }
+  });
+
+  Views.ContactView = Marionette.ItemView.extend({
+    template: 'contact',
+    className: 'contact-block',
+
+    events: {
+      'mouseenter .link-icons a': 'showLabel',
+      'mouseleave .link-icons a': 'hideLabels'
+    },
+
+    showLabel: function(evt) {
+      var label = $(evt.currentTarget).data('label');
+      this.$('.l-label').removeClass('active');
+      this.$('.l-label.' + label).addClass('active');
+    },
+
+    hideLabels: function() {
+      this.$('.l-label').removeClass('active');
+    }
+
   });
 
 });
+
+
+
+
+
+

@@ -2,8 +2,9 @@ App.module("Entities", function(Entities, App, Backbone, Marionette, $, _) {
 
   Entities.Skill = Backbone.Model.extend({
     defaults: {
-      "name": "skill name",
-      "rating": 5
+      "name": "",
+      "categories": [],
+      "rating": 0
     }
   });
 

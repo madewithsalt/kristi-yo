@@ -1,0 +1,52 @@
+
+.work-block {
+  margin-top: 40px;
+  padding-bottom: 80px;
+
+  .current-project {
+    @include make-sm-column(4);
+    @include make-md-column(4);
+    @include make-lg-column(4);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .past-projects {
+    @include make-sm-column(6);
+    @include make-md-column(6);
+    @include make-lg-column(6);
+    @include make-md-column-offset(1);
+    @include make-lg-column-offset(1);
+
+    img {
+      width: 100%;
+      margin: 16px 0;
+    }
+  }
+
+  .project-details {
+    padding: 6px;
+    padding-bottom: 12px;
+    background-color: rgba(0,0,0,0.05);
+    @include border-radius(6px);
+  }
+
+  .project-title {
+    font-weight: 200;
+    font-size: 1.5em;
+    margin-bottom: 6px;
+  }
+
+  .project-image {
+    margin: 8px 25px;
+    
+    img {
+      border: 1px solid #999;
+      @include border-radius(4px);
+      overflow: hidden;
+    }
+  }
+
+}

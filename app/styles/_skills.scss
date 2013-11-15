@@ -1,0 +1,70 @@
+#skills-region {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.skills-block {
+  margin-top: 90px;
+
+  .skills-intro {
+    @include make-lg-column(3);
+    @include make-md-column(3);
+    @include make-sm-column(3);
+  }
+  .skills-list-block {
+    @include make-lg-column(7);
+    @include make-md-column(7);
+    @include make-sm-column(7);
+    @include make-sm-column-push(1);
+    @include make-md-column-push(1);
+    @include make-lg-column-push(1);
+  }
+
+  .skills-list {
+    @include make-row;
+  }
+
+  .skill {
+    @include make-xs-column(6);
+    @include make-md-column(6);
+    @include make-sm-column(6);
+    @include make-lg-column(6);
+
+    .progress {
+      height: 14px;
+      margin-bottom: 10px;
+    }
+
+    &.js {
+      .progress-bar {
+        @extend .progress-bar-success;
+      }
+    }
+
+    &.markup, {
+      .progress-bar {
+        @extend .progress-bar-info;
+      }
+    }
+
+    &.backend {
+      .progress-bar {
+        @extend .progress-bar-warning;
+      }
+    }
+
+    &.misc {
+      .progress-bar {
+        @extend .progress-bar-danger;
+      }      
+    }
+  }
+
+  .filters {
+    .label {
+      display: inline-block;
+      margin-right: 6px;
+      margin-bottom: 4px; 
+      padding: 4px 8px;
+    }
+  }
+}
