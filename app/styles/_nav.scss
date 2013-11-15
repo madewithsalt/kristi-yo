@@ -1,14 +1,45 @@
 
 .header {
+  text-align: center;
+
   .nav {
+    margin: 0 auto;
+
     li {
       display: inline-block;
       vertical-align: middle;
-      margin-left: 12px;
+      margin-left: 24px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover, &.active {
+        background-color: transparent;
+      }
 
       a {
-        padding: 4px 8px
+        padding: 12px 12px;
+        text-transform: uppercase;
+        color: $text-color;
+        @include transition(all .3s ease-out);
+      }
+
+      &.active a, a:hover {
+        background-color: rgba(0,0,0,0.20);
+        color: #fff;
       }
     }
+  
+    &#nav-intro {
+      a {
+        color: rgba(255,255,255,0.75);
+      }
+
+      .active a, a:hover {
+        background-color: darken($orange, 10);
+      }
+    }
+
   }
 }

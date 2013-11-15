@@ -1,0 +1,88 @@
+
+[
+    {
+      "name": "HTML5",
+      "rating": 5
+    },
+    {
+      "name": "CSS3",
+      "rating": 5
+    },
+    {
+      "name": "SASS/LESS",
+      "rating": 5
+    },
+    {
+      "name": "BackboneJS",
+      "rating": 5
+    },
+    {
+      "name": "MarionetteJS",
+      "rating": 5
+    },
+    {
+      "name": "AngularJS",
+      "rating": 3
+    },
+    {
+      "name": "Vanilla JavaScript",
+      "rating": 5
+    },
+    {
+      "name": "CoffeeScript",
+      "rating": 3
+    },
+    {
+      "name": "jQuery",
+      "rating": 5
+    },
+    {
+      "name": "Handlebars/Mustache",
+      "rating": 5
+    },
+    {
+      "name": "Bootstrap",
+      "rating": 5
+    },
+    {
+      "name": "Python",
+      "rating": 2
+    },
+    {
+      "name": "Ruby/Ruby on Rails",
+      "rating": 3
+    },
+    {
+      "name": "Django",
+      "rating": 3
+    },
+    {
+      "name": "PhP",
+      "rating": 2
+    },
+    {
+      "name": "Wordpress Theme Dev.",
+      "rating": 4
+    },
+    {
+      "name": "Wordpress Plugin Dev.",
+      "rating": 1
+    },
+    {
+      "name": "Github",
+      "rating": 5
+    },
+    {
+      "name": "Cooking",
+      "rating": 1
+    },
+    {
+      "name": "Using Anything Adobe",
+      "rating": 5
+    },
+    {
+      "name": "mySQL, Postgres, Mongo",
+      "rating": 1
+    }
+
+]

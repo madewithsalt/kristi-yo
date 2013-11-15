@@ -42,6 +42,10 @@ module.exports = function (grunt) {
             handlebars: {
                 files: ['<%= yeoman.app %>/templates/*.hbs'],
                 tasks: ['handlebars']
+            },
+            js: {
+                files: ['<%= yeoman.app %>/scripts/app/{,*/}*.js'],
+                tasks: ['concat:backbone']
             }
         },
         connect: {
@@ -151,10 +155,21 @@ module.exports = function (grunt) {
         },
         // not used since Uglify task does concat,
         // but still available if needed
-        /*concat: {
-            dist: {}
-        }, */
+        concat: {
+          options: {
+            separator: ';'
+          },
 
+          backbone: {
+            src: [
+              "<%= yeoman.app %>/scripts/app/base.js", 
+              "<%= yeoman.app %>/scripts/app/entities.js", 
+              "<%= yeoman.app %>/scripts/app/views.js",
+              "<%= yeoman.app %>/scripts/app/controllers.js"
+            ],
+            dest: '<%= yeoman.app %>/scripts/app.js'
+          }
+        },
         // Handlebars
         handlebars: {
           compile: {

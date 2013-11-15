@@ -1,14 +1,15 @@
+@import "compass";
 @import "bootstrap";
 @import "variables";
 @import "fonts";
 
 @import "nav";
-
+@import "intro";
+@import "about";
+@import "skills";
 
 /* Space out content a bit */
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
     color: $text-color;
     @include open-sans;
 }
@@ -21,16 +22,26 @@ body {
     padding-right: 15px;
 }
 
+
 /* Custom page header */
 .header {
+    position: fixed;
+    top: 4px;
+    width: 100%;
+    z-index: 100;
+}
 
+.sections {
+
+    .section {
+		position: relative;
+        min-height: 550px;
+        @include clearfix;
+    }
 }
 
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
 
 }

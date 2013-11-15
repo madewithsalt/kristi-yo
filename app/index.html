@@ -17,31 +17,32 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".header">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
 
-        <div class="container">
-            <div class="header">
-                <ul class="nav pull-right">
-                    <li class="active"><a href="#">Intro</a></li>
-                    <li><a href="#">What I do</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Past Work</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="intro">
-
-            </div>
-
-            <div class="footer">
-            </div>
-
+        <div class="header">
+            <ul class="nav" id="nav-intro">
+                <li><a href="#intro-region">Intro</a></li>
+                <li><a href="#about-region">What I do</a></li>
+                <li><a href="#skills-region">Skills</a></li>
+                <li><a href="#work-region">Past Work</a></li>
+                <li><a href="#contact-region">Contact</a></li>
+            </ul>
         </div>
+
+        <div class="sections">
+            <div id="intro-region" class="section" data-position="intro"></div>
+            <div id="about-region" class="section" data-position="about"></div>
+            <div id="skills-region" class="section" data-position="skills"></div>
+            <div id="work-region" class="section" data-position="work"></div>
+            <div id="contact-region" class="section" data-position="contact"></div>
+        </div>
+        <div class="footer">
+        </div>
+
 
 
         <!-- build:js scripts/vendor.js -->
@@ -63,11 +64,14 @@
         <!-- build:js scripts/libs.js -->
         <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/backbone/backbone.js"></script>
+        <script src="bower_components/marionette/lib/backbone.marionette.js"></script>
         <script src="bower_components/handlebars/handlebars.js"></script>
+        <script src="scripts/libs/waypoints.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/templates.js"></script>
+        <script src="scripts/app.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
@@ -84,6 +88,7 @@
         <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
         <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
         <script src="bower_components/sass-bootstrap/js/tab.js"></script>
+        <script src="bower_components/skrollr/src/skrollr.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -1,0 +1,42 @@
+.about-block {
+  margin-top: 100px;
+
+  h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }
+
+  .descrip {
+    @include make-md-column-push(3);
+    @include make-lg-column-push(4);
+
+    span {
+      display: block;
+      @include transition(all .3s ease-in);
+      @include transform-style(preserve-3d);
+      @include transition(0.5s);
+    }
+
+    .headline-2 {
+      @include opacity(0);
+    }
+
+    [class^="headline-"] {
+      color: $orange;
+      font-size: 3em;
+    }
+
+    [class^="subline-"] {
+      font-size: 2em;
+      overflow: hidden;
+      @include transform(rotatex(-90deg));
+      height: 0;
+
+      &.expanded {
+        @include transform(rotatex(0deg));
+        height: 40px;
+      }
+    }
+  }
+}
