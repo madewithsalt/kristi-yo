@@ -35,6 +35,8 @@ this.App = (function(Backbone, Marionette) {
   });
 
   App.on('initialize:after', function() {
+    // Skrollr
+    App.skrollr = skrollr.init();
 
     App.introRegion.show(new App.Views.IntroView());
     App.aboutRegion.show(new App.Views.AboutView());
@@ -48,7 +50,6 @@ this.App = (function(Backbone, Marionette) {
 
     App.workRegion.show(new App.Views.WorkView());
     App.contactRegion.show(new App.Views.ContactView());
-
   });
   
   return App;
@@ -106,6 +107,9 @@ this.App = (function(Backbone, Marionette) {
         'data-0': 'top: 30%;',
         'data-500': 'top: 40%;'
       });
+
+      App.skrollr.refresh();
+
     }
   });
 
@@ -129,6 +133,8 @@ this.App = (function(Backbone, Marionette) {
         'data-0-top': 'opacity: 1;',
         'data--300-top': 'opacity: 0;'
       });
+  
+      App.skrollr.refresh();
 
     },
 

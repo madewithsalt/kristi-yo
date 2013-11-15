@@ -19,6 +19,9 @@ App.module("Views", function(Views, App, Backbone, Marionette, $, _) {
         'data-0': 'top: 30%;',
         'data-500': 'top: 40%;'
       });
+
+      App.skrollr.refresh();
+
     }
   });
 
@@ -42,6 +45,8 @@ App.module("Views", function(Views, App, Backbone, Marionette, $, _) {
         'data-0-top': 'opacity: 1;',
         'data--300-top': 'opacity: 0;'
       });
+  
+      App.skrollr.refresh();
 
     },
 

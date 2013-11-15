@@ -8,8 +8,9 @@
   }
 
   .descrip {
-    @include make-md-column-push(3);
-    @include make-lg-column-push(4);
+    @include make-md-column-offset(3);
+    @include make-lg-column-offset(4);
+    @include make-sm-column-offset(1);
 
     span {
       display: block;
@@ -39,4 +40,12 @@
       }
     }
   }
+
+  @media (max-width: $screen-sm-max) {
+   .descrip {
+    padding-left: 12px;
+   }    
+  }
+
 }
+

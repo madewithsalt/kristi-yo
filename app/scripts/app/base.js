@@ -35,6 +35,8 @@ this.App = (function(Backbone, Marionette) {
   });
 
   App.on('initialize:after', function() {
+    // Skrollr
+    App.skrollr = skrollr.init();
 
     App.introRegion.show(new App.Views.IntroView());
     App.aboutRegion.show(new App.Views.AboutView());
@@ -48,7 +50,6 @@ this.App = (function(Backbone, Marionette) {
 
     App.workRegion.show(new App.Views.WorkView());
     App.contactRegion.show(new App.Views.ContactView());
-
   });
   
   return App;

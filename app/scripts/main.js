@@ -3,9 +3,6 @@ $(function() {
 
   App.start();
 
-  // Skrollr
-  var s = skrollr.init();
-
 
   // Nav Waypoints
   $('.section').not('#intro-region').waypoint(function() {
