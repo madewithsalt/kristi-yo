@@ -33,6 +33,11 @@ $(function() {
       'scrollTop': coords
     });
 
+    $('body').scrollSpy({
+      target: '.header'
+    });
+
+
   });
 
 });
