@@ -3,7 +3,6 @@ $(function() {
 
   App.start();
 
-
   // Nav Waypoints
   $('.section').not('#intro-region').waypoint(function() {
     var position = $(this).data('position');

@@ -20,7 +20,7 @@ App.module("Views", function(Views, App, Backbone, Marionette, $, _) {
         'data-500': 'top: 40%;'
       });
 
-      App.skrollr.refresh();
+      App.refreshSkrollr();
 
     }
   });
@@ -46,7 +46,7 @@ App.module("Views", function(Views, App, Backbone, Marionette, $, _) {
         'data--300-top': 'opacity: 0;'
       });
   
-      App.skrollr.refresh();
+      App.refreshSkrollr();
 
     },
 
