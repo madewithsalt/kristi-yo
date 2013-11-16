@@ -26,6 +26,14 @@ a {
   }
 }
 
+.browsehappy {
+  text-align: center;
+  padding: 24px;
+  color: $alert-warning-text;
+  background-color: $alert-warning-bg;
+  border: 3px solid $alert-warning-border;
+}
+
 .header,
 .marketing,
 .footer {
@@ -38,6 +46,10 @@ a {
     top: 4px;
     width: 100%;
     z-index: 100;
+}
+
+.lt-ie9 .header {
+  position: relative;
 }
 
 .sections {
