@@ -35,8 +35,17 @@ this.App = (function(Backbone, Marionette) {
   });
 
   App.on('initialize:after', function() {
+    /*
+    * Skrollr is a bit borkified on mobile, so disabling it for now.
+    */
     // Skrollr
-    App.skrollr = skrollr.init();
+    // App.skrollr = skrollr.init();
+
+    App.refreshSkrollr = function() {
+      if(App.skrollr) {
+        App.skrollr.refresh();
+      }
+    };
 
     App.introRegion.show(new App.Views.IntroView());
     App.aboutRegion.show(new App.Views.AboutView());
