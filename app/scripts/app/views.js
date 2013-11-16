@@ -10,6 +10,8 @@ App.module("Views", function(Views, App, Backbone, Marionette, $, _) {
   * Yay modularity! :)
   */
 
+  $.fn.waypoint = function() {};
+
   Views.IntroView = Marionette.ItemView.extend({
     template: 'intro',
     className: 'intro-block',
@@ -21,7 +23,6 @@ App.module("Views", function(Views, App, Backbone, Marionette, $, _) {
       });
 
       App.refreshSkrollr();
-
     }
   });
 

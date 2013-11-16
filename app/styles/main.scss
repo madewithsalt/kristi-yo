@@ -1,6 +1,6 @@
 @import "compass";
-@import "bootstrap";
 @import "variables";
+@import "bootstrap";
 @import "fonts";
 
 @import "nav";
@@ -14,14 +14,16 @@
 body {
     color: $text-color;
     @include open-sans;
+    height: 100%;
+    min-height: 100%;
 }
 
 a {
-	color: $orange;
+  color: $orange;
 
-	&:hover {
-		color: darken($orange, 20);
-	}
+  &:hover {
+    color: darken($orange, 20);
+  }
 }
 
 .header,
@@ -41,28 +43,28 @@ a {
 .sections {
 
     .section {
-		position: relative;
-        min-height: 550px;
-        padding-bottom: 40px;
-        @include clearfix;
+      position: relative;
+      min-height: 550px;
+      padding-bottom: 40px;
+      @include clearfix;
     }
 }
 
 .sm-header {
-	font-size: 1.8em;
-	font-weight: 200;
-	text-transform: uppercase;
+  font-size: 1.8em;
+  font-weight: 200;
+  text-transform: uppercase;
 }
 
 .lg-header {
-	font-size: 2.3em;
-	font-weight: 200;
+  font-size: 2.3em;
+  font-weight: 200;
 }
 
 .footer {
-	padding: 8px;
-	text-align: center;
-	width: 100%;
+  padding: 8px;
+  text-align: center;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {

@@ -26,19 +26,17 @@ this.App = (function(Backbone, Marionette) {
 
   App.reqres = new Backbone.Wreqr.RequestResponse();
 
-  App.addRegions({
-    introRegion: '#intro-region',
-    aboutRegion: '#about-region',
-    skillsRegion: '#skills-region',
-    workRegion: '#work-region',
-    contactRegion: '#contact-region'
-  });
 
   App.on('initialize:after', function() {
 
-    /*
-    * Skrollr is a bit borkified on mobile, so disabling it for now.
-    */
+    App.addRegions({
+      introRegion: '#intro-region',
+      aboutRegion: '#about-region',
+      skillsRegion: '#skills-region',
+      workRegion: '#work-region',
+      contactRegion: '#contact-region'
+    });
+    
     // Skrollr
     // App.skrollr = skrollr.init();
 
@@ -60,6 +58,42 @@ this.App = (function(Backbone, Marionette) {
 
     App.workRegion.show(new App.Views.WorkView());
     App.contactRegion.show(new App.Views.ContactView());
+
+
+    // Nav Waypoints
+    $('.section').not('#intro-region').waypoint(function() {
+      var position = $(this).data('position');
+
+      $('.nav').attr('id', 'nav-' + position);
+    }, {
+      offset: 0
+    });
+
+    $('#intro-region').waypoint(function() {
+      var position = $(this).data('position');
+
+      $('.nav').attr('id', 'nav-' + position);
+    }, {
+      offset: -540
+    });
+
+
+    // ScrollTop on menu click
+    $('.nav a').on('click', function(evt) {
+      var $target = $($(this).attr('href')),
+          coords = $target.offset().top;
+
+      evt.preventDefault();
+
+      $('html, body').animate({
+        'scrollTop': coords
+      });
+
+    });
+
+
+
+
   });
   
   return App;
@@ -108,6 +142,8 @@ this.App = (function(Backbone, Marionette) {
   * Yay modularity! :)
   */
 
+  $.fn.waypoint = function() {};
+
   Views.IntroView = Marionette.ItemView.extend({
     template: 'intro',
     className: 'intro-block',
@@ -119,7 +155,6 @@ this.App = (function(Backbone, Marionette) {
       });
 
       App.refreshSkrollr();
-
     }
   });
 
