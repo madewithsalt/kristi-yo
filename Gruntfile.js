@@ -327,6 +327,12 @@ module.exports = function (grunt) {
                 'svgmin',
                 'htmlmin'
             ]
+        },
+        exec: {
+            deploy: {
+                command: 'deploy'
+            }
+
         }
     });
 
@@ -375,5 +381,10 @@ module.exports = function (grunt) {
         'jshint',
         'test',
         'build'
+    ]);
+
+    grunt.registerTask('deploy', [
+        'build',
+        'exec:deploy'
     ]);
 };
