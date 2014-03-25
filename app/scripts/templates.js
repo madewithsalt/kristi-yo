@@ -12,10 +12,11 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/templates/contact.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "";
 
 
-  return "<div class=\"container\">\n  <h3 class=\"sm-header\">Hire Me</h3>\n  <div class=\"contact-links\">\n    <div class=\"lg-header\"><span>I'm currently available for</span><span> contract or freelance projects.</span></div>\n    <p>Part or Full Time.</p>\n    <ul class=\"link-icons\">\n      <li><a data-label=\"resume\" href=\"/files/KristiCentinaro-Resume2013.pdf\" target=\"_blank\"><i class=\"fa fa-file-text-o\"></i></a></li>\n      <li><a data-label=\"github\" href=\"https://github.com/tnbKristi?tab=repositories\" target=\"_blank\"><i class=\"fa fa-github-alt\"></i></a></li>\n      <li><a data-label=\"linkedin\" href=\"http://www.linkedin.com/in/kristicentinaro/\" target=\"_blank\"><i class=\"fa fa-linkedin\"></i></a></li>\n      <li><a data-label=\"googleplus\" href=\"http://plus.google.com/u/0/105851997129401536120/posts/\" target=\"_blank\"><i class=\"fa fa-google-plus\"></i></a></li>\n      <li><a data-label=\"deviantart\" href=\"http://inkjetcanvas.deviantart.com/\" target=\"_blank\"><i class=\"fa fa-picture-o\"></i></a></li>\n    </ul>\n    <div class=\"link-labels\">\n      <div class=\"l-label resume\">Download my résumé</div>\n      <div class=\"l-label github\">Explore my GitHub Repo</div>\n      <div class=\"l-label linkedin\">Connect on LinkedIn</div>\n      <div class=\"l-label googleplus\">Add me on Google+</div>\n      <div class=\"l-label deviantart\">Check out my DeviantArt</div>\n    </div>\n  </div>\n  <div class=\"contact-tnb\">\n    <div class=\"lg-header\">Need a full-stack dev team? Consider hiring my company instead:</div>\n    <div class=\"tnb-logo\">\n      <img src=\"/images/tnb-logo.png\" alt=\"There's No Box Logo\" />\n    </div>\n    <p>We specialize in Ruby on Rails &amp; API-driven, Single Page Application development.</p>\n    <p>Contact me for more details!</p>\n  </div>\n</div>";
+  buffer += "<div class=\"container\">\n  <h3 class=\"sm-header\">Hire Me</h3>\n  <div class=\"contact-links\">\n    <div class=\"lg-header\"><span>I'm currently <b>not</b> available for</span><span> contract or freelance projects.</span></div><p>Sorry! :(</p>\n    <ul class=\"link-icons\">\n      \n      <li><a data-label=\"github\" href=\"https://github.com/tnbKristi?tab=repositories\" target=\"_blank\"><i class=\"fa fa-github-alt\"></i></a></li>\n      <li><a data-label=\"linkedin\" href=\"http://www.linkedin.com/in/kristicentinaro/\" target=\"_blank\"><i class=\"fa fa-linkedin\"></i></a></li>\n      <li><a data-label=\"googleplus\" href=\"http://plus.google.com/u/0/105851997129401536120/posts/\" target=\"_blank\"><i class=\"fa fa-google-plus\"></i></a></li>\n      <li><a data-label=\"deviantart\" href=\"http://inkjetcanvas.deviantart.com/\" target=\"_blank\"><i class=\"fa fa-picture-o\"></i></a></li>\n    </ul>\n    <div class=\"link-labels\">\n      \n      <div class=\"l-label github\">Explore my GitHub Repo</div>\n      <div class=\"l-label linkedin\">Connect on LinkedIn</div>\n      <div class=\"l-label googleplus\">Add me on Google+</div>\n      <div class=\"l-label deviantart\">Check out my DeviantArt</div>\n    </div>\n  </div>\n\n </div>";
+  return buffer;
   });
 
 this["JST"]["app/templates/intro.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -30,16 +31,16 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/templates/skill-item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
 
 
   buffer += "<span class=\"skill-name\">";
-  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
-  else { stack1 = (depth0 && depth0.name); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
     + "</span>\n<span class=\"skill-rating\">\n  <div class=\"progress\">  \n    <div class=\"progress-bar\" role=\"progressbar\" data-percent=\"";
-  if (stack1 = helpers.percent) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
-  else { stack1 = (depth0 && depth0.percent); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  if (helper = helpers.percent) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.percent); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
     + "\">\n  </div>\n</div></div>\n</span>";
   return buffer;
