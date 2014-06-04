@@ -1,6 +1,3 @@
-/*global _, JST, Backbone, Marionette */
-'use strict';
-
 window.App = (function(Backbone, Marionette) {
 
   var App;
@@ -29,15 +26,11 @@ window.App = (function(Backbone, Marionette) {
 
   App.reqres = new Backbone.Wreqr.RequestResponse();
 
-
   App.on('initialize:after', function() {
 
     App.addRegions({
       mainRegion: '#main-region'
     });
-    
-    App.workRegion.show(new App.Views.WorkView());
-    App.contactRegion.show(new App.Views.ContactView());
 
     // Nav Waypoints
     $('.section').not('#intro-region').waypoint(function() {

@@ -1,6 +1,8 @@
 App.module('Home', function(Home, App, Backbone, Marionette, $, _) {
 
   Home.View = App.Views.Layout.extend({
+    template: 'home',
+    className: 'home sections',
 
     regions: {
       introRegion: '#intro-region',
@@ -22,12 +24,12 @@ App.module('Home', function(Home, App, Backbone, Marionette, $, _) {
     },
 
     showIntro: function() {
-      this.activeComponents.intro = new App.Views.IntroView();
+      this.activeComponents.intro = new Home.Intro.View();
       this.introRegion.show(this.activeComponents.intro);
     },
 
     showAbout: function() {
-      this.activeComponents.about = new App.Views.AboutView();
+      this.activeComponents.about = new Home.About.View();
       this.aboutRegion.show(this.activeComponents.about);
     },
 
@@ -42,12 +44,12 @@ App.module('Home', function(Home, App, Backbone, Marionette, $, _) {
     },
 
     showWork: function() {
-      this.activeComponents.work = new App.Views.WorkView();
+      this.activeComponents.work = new Home.Work.View();
       this.workRegion.show(this.activeComponents.work);
     },
 
     showContact: function() {
-      this.activeComponents.contact = new App.Views.ContactView();
+      this.activeComponents.contact = new Home.Contact.View();
       this.contactRegion.show(this.activeComponents.contact);
     }
   });

@@ -1,7 +1,7 @@
 App.module('Home.Skills', function(Skills, App, Backbone, Marionette, $, _) {
 
   Skills.ItemView = App.Views.ItemView.extend({
-    template: 'skill-item',
+    template: 'home/skill-item',
     className: 'skill',
 
     serializeData: function() {
@@ -23,7 +23,7 @@ App.module('Home.Skills', function(Skills, App, Backbone, Marionette, $, _) {
   });
 
   Skills.View = App.Views.CompositeView.extend({
-    template: 'skills',
+    template: 'home/skills',
     className: 'skills-block',
     itemView: Skills.ItemView,
     itemViewContainer: '.skills-list',
