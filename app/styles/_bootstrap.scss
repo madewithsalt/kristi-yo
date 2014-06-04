@@ -1,26 +1,25 @@
-$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
-$bootstrap-path: "sass-bootstrap/lib/";
-
+$icon-font-path: "bootstrap-sass-official/vendor/assets/fonts";
+$bootstrap-path: "bootstrap-sass-official/vendor";
 
 // Core variables and mixins
-@import "sass-bootstrap/lib/variables";
-@import "sass-bootstrap/lib/mixins";
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables";
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/mixins";
 
 // Reset
-@import "sass-bootstrap/lib/normalize";
-@import "sass-bootstrap/lib/print";
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/normalize";
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/print";
 
 // Core CSS
-@import "sass-bootstrap/lib/scaffolding";
-
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/scaffolding";
 
 // Components
-@import "sass-bootstrap/lib/component-animations";
-@import "sass-bootstrap/lib/navs";
-@import "sass-bootstrap/lib/labels";
-@import "sass-bootstrap/lib/progress-bars";
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/normalize";
 
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/component-animations";
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/navs";
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/labels";
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/progress-bars";
 
 // Utility classes
-@import "sass-bootstrap/lib/utilities";
-@import "sass-bootstrap/lib/responsive-utilities";
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/utilities";
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/responsive-utilities";

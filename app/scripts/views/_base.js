@@ -1,14 +1,12 @@
+
+
 App.module("Views", function(Views, App, Backbone, Marionette, $, _) {
 
-  /** VIEWS **
-  * Each section of the site is it's own view.
-  * In a larger-scale app, this would be broken down into
-  * individual files, one for each view/controller,
-  * and a module would be defined as it's component, such as "About".
-  * The module "About", would then contain it's respective View & Controller,
-  * properly encapsulating all of it's unique requirements from the rest of the app.
-  * Yay modularity! :)
-  */
+  App.Views.ItemView = Marionette.ItemView.extend({});
+  App.Views.CompositeView = Marionette.CompositeView.extend({});
+  App.Views.CollectionView = Marionette.CollectionView.extend({});
+  App.Views.Layout = Marionette.Layout.extend({});
+
 
   $.fn.waypoint = function() {};
 
@@ -78,54 +76,6 @@ App.module("Views", function(Views, App, Backbone, Marionette, $, _) {
     }
   });
 
-  Views.Skill = Marionette.ItemView.extend({
-    template: 'skill-item',
-    className: 'skill',
-
-    serializeData: function() {
-      var attrs = this.model.toJSON();
-
-      return _.extend(attrs, {
-        percent: attrs.rating * 10
-      });
-    },
-
-    onRender: function() {
-      var $el = this.$el,
-          cats = this.model.get('categories');
-
-      _.each(cats, function(item, idx) {
-        $el.addClass(item);
-      });
-    }
-  });
-
-  Views.SkillsView = Marionette.CompositeView.extend({
-    template: 'skills',
-    className: 'skills-block',
-    itemView: Views.Skill,
-    itemViewContainer: '.skills-list',
-
-    onShow: function() {
-      var self = this;
-
-      this.$('.skills-list-block').waypoint(function() {
-        self.showPercents();
-      }, {
-        offset: 150,
-        triggerOnce: true
-      });
-    },
-
-    showPercents: function(view) {
-      var $skills = this.$('.skill');
-
-      $skills.each(function() {
-        var $bar = $(this).find('.progress-bar');
-        $bar.css('width', $bar.data('percent') + '%');
-      });
-    }
-  });
 
   Views.WorkView = Marionette.ItemView.extend({
     template: 'work',

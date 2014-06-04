@@ -1,6 +1,6 @@
 this["JST"] = this["JST"] || {};
 
-this["JST"]["app/templates/about.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["templates/about.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
@@ -9,7 +9,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"descrip\">\n      <span class=\"headline-1\">I build</span>\n      <span class=\"subline-1\">fast,</span> \n      <span class=\"subline-2\">responsive,</span> \n      <span class=\"subline-3\">accessible,</span> \n      <span class=\"subline-4\">maintainable,</span> \n      <span class=\"subline-5\">well-designed,</span> \n      <span class=\"subline-6\">mobile-friendly,</span> \n      <span class=\"subline-7\">searchable,</span> \n      <span class=\"headline-2\">sexy websites.</span>\n    </div>\n  </div>\n</div>";
   });
 
-this["JST"]["app/templates/contact.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["templates/contact.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "";
@@ -19,7 +19,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return buffer;
   });
 
-this["JST"]["app/templates/intro.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["templates/intro.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
@@ -28,7 +28,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "\n<div class=\"intro-image\">\n  <img src=\"/images/profile-img-bw.jpg\" />\n</div>\n<div class=\"intro-content\">\n  <h1>Hi! I'm Kristi.</h1>\n  <h2>I'm A Front-End Developer <br />&amp; UX Designer.</h2>\n</div>";
   });
 
-this["JST"]["app/templates/skill-item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["templates/skill-item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
@@ -46,7 +46,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return buffer;
   });
 
-this["JST"]["app/templates/skills.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["templates/skills.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
@@ -55,7 +55,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "\n<div class=\"skills-intro\">\n  <h3 class=\"sm-header\">Skills &amp; Strengths</h3>\n  <p>I'm happiest when I'm creating engaging and intuitive experiences for people on the web.</p>\n  <p>I work best when I can focus on <b>exceptional design</b>, <b>user experience</b>, and <b>semantic code</b>.</p>\n  <p>I love building responsive, mobile-friendly web apps with Backbone &amp; Marionette, though I've built a few Django and Wordpress sites, too!</p>\n  <p></p>\n  <div class=\"filters\">\n    <span class=\"label label-info\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i> Semantic Markup\n    </span>\n    <span class=\"label label-success\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i>  JavaScript\n    </span>\n    <span class=\"label label-warning\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i>  Backend / DevTools\n    </span>\n    <span class=\"label label-danger\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i> Misc\n    </span>\n    <span class=\"label label-primary\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i> Front End\n    </span>\n  </div>\n</div>\n<div class=\"skills-list-block\">\n  <div class=\"skills-list\"></div>\n</div>";
   });
 
-this["JST"]["app/templates/work.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["templates/work.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   

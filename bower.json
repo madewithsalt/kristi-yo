@@ -2,9 +2,9 @@
   "name": "kristi-yo",
   "version": "0.0.0",
   "dependencies": {
-    "sass-bootstrap": "~3.0.0",
+    "bootstrap-sass-official": "latest",
     "modernizr": "~2.6.2",
-    "jquery": "~1.10.2",
+    "jquery": "latest",
     "handlebars": "latest",
     "skrollr": "latest",
     "backbone": "latest",
@@ -12,5 +12,19 @@
     "underscore": "latest",
     "font-awesome": "latest"
   },
-  "devDependencies": {}
+  "homepage": "https://github.com/tnbKristi/kristi-yo",
+  "description": "Website of Kristi Centinaro",
+  "authors": [
+    "Kristi Centinaro"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
 }
