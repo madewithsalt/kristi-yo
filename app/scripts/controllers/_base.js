@@ -12,7 +12,7 @@
   * might do if there is no data, for example, we might serve an entirely different view.
   */
   App.Controller = Marionette.Controller.extend({
-    region: App.reqres('app:defaultregion'),
+    // region: App.reqres('app:defaultregion'),
     showLoader: function() {
       this.region.show(new App.Views.LoadingView());
     }

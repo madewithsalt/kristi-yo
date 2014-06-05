@@ -10,11 +10,7 @@
   }
 
   .contact-links {
-    @include make-sm-column(8);
-    @include make-md-column(8);
-    @include make-lg-column(8);
-    margin-top: 12px;
-
+    margin: 12px;
   }
 
   .contact-tnb {
@@ -42,7 +38,7 @@
 
     li {
       display: inline-block;
-      margin-right: 4px;
+      margin: 10px 6px;
     }
 
     a {
@@ -88,27 +84,17 @@
   .contact-block {
 
     .link-icons {
-      margin-bottom: 20px;
       
       a {
-        font-size: 30px;
-        line-height: 50px;
-        height: 50px;
-        width: 50px;
-        margin-bottom: 6px;
+        font-size: 55px;
+        line-height: 80px;
+        height: 80px;
+        width: 80px;
       }
     }
 
-    .link-labels {
-      display: none;
-    }
   
 
-    .contact-tnb {
-      .tnb-logo {
-        max-width: 300px;
-      }
-    }
   }
 
 }

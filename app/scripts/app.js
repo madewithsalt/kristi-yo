@@ -1,72 +1,43 @@
 window.App = (function(Backbone, Marionette) {
 
-  var App;
+    var App;
 
-  _.extend(Marionette.Renderer, {
+    _.extend(Marionette.Renderer, {
 
-    path: 'app/templates/',
+        path: 'templates/',
 
-    render: function(template, data) {
-      var path = this.getTemplate(template);
+        render: function(template, data) {
+            var path = this.getTemplate(template);
 
-      if(!path) {
-        $.error('Template ' + template + ' not found!');
-        return;
-      }
+            if (!path) {
+                $.error('Template ' + template + ' not found!');
+                return;
+            }
 
-      return path(data);
-    },
-    
-    getTemplate: function(template) {
-      return JST[this.path + template + '.hbs'];
-    }
-  });
+            return path(data);
+        },
 
-  App = new Marionette.Application();
-
-  App.reqres = new Backbone.Wreqr.RequestResponse();
-
-  App.on('initialize:after', function() {
-
-    App.addRegions({
-      mainRegion: '#main-region'
+        getTemplate: function(template) {
+            return JST[this.path + template + '.hbs'];
+        }
     });
 
-    // Nav Waypoints
-    $('.section').not('#intro-region').waypoint(function() {
-      var position = $(this).data('position');
+    App = new Marionette.Application();
 
-      $('.nav').attr('id', 'nav-' + position);
-    }, {
-      offset: 0
-    });
+    App.reqres = new Backbone.Wreqr.RequestResponse();
 
-    $('#intro-region').waypoint(function() {
-      var position = $(this).data('position');
+    App.on('initialize:after', function() {
 
-      $('.nav').attr('id', 'nav-' + position);
-    }, {
-      offset: -540
-    });
+        App.addRegions({
+            mainRegion: '#main-region'
+        });
 
-
-    // ScrollTop on menu click
-    $('.nav a').on('click', function(evt) {
-      var $target = $($(this).attr('href')),
-          coords = $target.offset().top;
-
-      evt.preventDefault();
-
-      $('html, body').animate({
-        'scrollTop': coords
-      });
+        App.reqres.setHandler('app:region:default', function() {
+            return App.mainRegion;
+        });
 
     });
 
-
-
-  });
-  
-  return App;
+    return App;
 
 })(Backbone, Marionette);

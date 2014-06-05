@@ -36,7 +36,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['<%= config.app %>/scripts/{,**/}*.js'],
-                tasks: ['jshint'],
+                // tasks: ['jshint'],
                 options: {
                     livereload: true
                 }
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
             },
             gruntfile: {
                 files: ['Gruntfile.js', 'package.json', '<%= config.app %>/index.html'],
-                tasks: ['tags', 'prettify']
+                tasks: ['tags']
             },
             sass: {
                 files: ['<%= config.app %>/styles/{,**/}*.{scss,sass}'],
@@ -326,7 +326,9 @@ module.exports = function(grunt) {
                         '.htaccess',
                         'images/{,**/}*.{gif,jpeg,jpg,png,webp}',
                         '{,*/}*.html',
-                        'styles/fonts/{,*/}*.*'
+                        'styles/fonts/{,*/}*.*',
+                        'data/{,**/}*.*',
+                        'files/{,**/}*.*'
                     ]
                 }, {
                     expand: true,

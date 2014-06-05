@@ -1,6 +1,15 @@
 this["JST"] = this["JST"] || {};
 
-this["JST"]["templates/about.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["templates/home.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div id=\"intro-region\" class=\"section\" data-position=\"intro\"></div>\n<div id=\"about-region\" class=\"section\" data-position=\"about\"></div>\n<div id=\"skills-region\" class=\"section\" data-position=\"skills\"></div>\n<div id=\"work-region\" class=\"section\" data-position=\"work\"></div>\n<div id=\"contact-region\" class=\"section\" data-position=\"contact\"></div>\n";
+  });
+
+this["JST"]["templates/home/about.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
@@ -9,17 +18,17 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"descrip\">\n      <span class=\"headline-1\">I build</span>\n      <span class=\"subline-1\">fast,</span> \n      <span class=\"subline-2\">responsive,</span> \n      <span class=\"subline-3\">accessible,</span> \n      <span class=\"subline-4\">maintainable,</span> \n      <span class=\"subline-5\">well-designed,</span> \n      <span class=\"subline-6\">mobile-friendly,</span> \n      <span class=\"subline-7\">searchable,</span> \n      <span class=\"headline-2\">sexy websites.</span>\n    </div>\n  </div>\n</div>";
   });
 
-this["JST"]["templates/contact.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["templates/home/contact.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "";
 
 
-  buffer += "<div class=\"container\">\n  <h3 class=\"sm-header\">Hire Me</h3>\n  <div class=\"contact-links\">\n    <div class=\"lg-header\"><span>I'm currently <b>not</b> available for</span><span> contract or freelance projects.</span></div><p>Sorry! :(</p>\n    <ul class=\"link-icons\">\n      \n      <li><a data-label=\"github\" href=\"https://github.com/tnbKristi?tab=repositories\" target=\"_blank\"><i class=\"fa fa-github-alt\"></i></a></li>\n      <li><a data-label=\"linkedin\" href=\"http://www.linkedin.com/in/kristicentinaro/\" target=\"_blank\"><i class=\"fa fa-linkedin\"></i></a></li>\n      <li><a data-label=\"googleplus\" href=\"http://plus.google.com/u/0/105851997129401536120/posts/\" target=\"_blank\"><i class=\"fa fa-google-plus\"></i></a></li>\n      <li><a data-label=\"deviantart\" href=\"http://inkjetcanvas.deviantart.com/\" target=\"_blank\"><i class=\"fa fa-picture-o\"></i></a></li>\n    </ul>\n    <div class=\"link-labels\">\n      \n      <div class=\"l-label github\">Explore my GitHub Repo</div>\n      <div class=\"l-label linkedin\">Connect on LinkedIn</div>\n      <div class=\"l-label googleplus\">Add me on Google+</div>\n      <div class=\"l-label deviantart\">Check out my DeviantArt</div>\n    </div>\n  </div>\n\n </div>";
+  buffer += "<div class=\"container\">\n  <h3 class=\"sm-header\">Contact</h3>\n  <div class=\"contact-links\">\n    \n    <ul class=\"link-icons\">\n      <li><a data-label=\"resume\" href=\"/files/KristiCentinaro-Resume2014.pdf\" download=\"KristiCentinaro-Resume2014.pdf\" target=\"_blank\"><i class=\"fa fa-file-text-o\"></i></a></li>\n      <li><a data-label=\"github\" href=\"https://github.com/tnbKristi?tab=repositories\"><i class=\"fa fa-github-alt\"></i></a></li>\n      <li><a data-label=\"linkedin\" href=\"http://www.linkedin.com/in/kristicentinaro/\"><i class=\"fa fa-linkedin\"></i></a></li>\n      <li><a data-label=\"twitter\" href=\"https://twitter.com/theresnobox\"><i class=\"fa fa-twitter\"></i></a></li>\n      <li><a data-label=\"googleplus\" href=\"http://plus.google.com/u/0/105851997129401536120/posts/\"><i class=\"fa fa-google-plus\"></i></a></li>\n      <li><a data-label=\"deviantart\" href=\"http://inkjetcanvas.deviantart.com/\"><i class=\"fa fa-picture-o\"></i></a></li>\n      <li><a data-label=\"stackoverflow\" href=\"http://stackoverflow.com/users/684795/kcent\"><i class=\"fa fa-stack-overflow\"></i></a></li>\n\n    </ul>\n    \n    <div class=\"link-labels\">\n      <div class=\"l-label resume\">Download my résumé</div>\n      <div class=\"l-label github\">Explore my GitHub Repo</div>\n      <div class=\"l-label twitter\">Follow me on Twitter</div>\n      <div class=\"l-label linkedin\">Connect on LinkedIn</div>\n      <div class=\"l-label googleplus\">Add me on Google+</div>\n      <div class=\"l-label deviantart\">Check out my DeviantArt</div>\n      <div class=\"l-label stackoverflow\">Stalk my Stackoverflow Profile</div>\n    </div>\n  </div>\n\n </div>";
   return buffer;
   });
 
-this["JST"]["templates/intro.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["templates/home/intro.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
@@ -28,7 +37,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "\n<div class=\"intro-image\">\n  <img src=\"/images/profile-img-bw.jpg\" />\n</div>\n<div class=\"intro-content\">\n  <h1>Hi! I'm Kristi.</h1>\n  <h2>I'm A Front-End Developer <br />&amp; UX Designer.</h2>\n</div>";
   });
 
-this["JST"]["templates/skill-item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["templates/home/skill-item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
@@ -46,7 +55,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return buffer;
   });
 
-this["JST"]["templates/skills.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["templates/home/skills.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
@@ -55,7 +64,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "\n<div class=\"skills-intro\">\n  <h3 class=\"sm-header\">Skills &amp; Strengths</h3>\n  <p>I'm happiest when I'm creating engaging and intuitive experiences for people on the web.</p>\n  <p>I work best when I can focus on <b>exceptional design</b>, <b>user experience</b>, and <b>semantic code</b>.</p>\n  <p>I love building responsive, mobile-friendly web apps with Backbone &amp; Marionette, though I've built a few Django and Wordpress sites, too!</p>\n  <p></p>\n  <div class=\"filters\">\n    <span class=\"label label-info\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i> Semantic Markup\n    </span>\n    <span class=\"label label-success\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i>  JavaScript\n    </span>\n    <span class=\"label label-warning\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i>  Backend / DevTools\n    </span>\n    <span class=\"label label-danger\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i> Misc\n    </span>\n    <span class=\"label label-primary\" data-label=\"markup\">\n      <i class=\"fa fa-tag\"></i> Front End\n    </span>\n  </div>\n</div>\n<div class=\"skills-list-block\">\n  <div class=\"skills-list\"></div>\n</div>";
   });
 
-this["JST"]["templates/work.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["templates/home/work.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
